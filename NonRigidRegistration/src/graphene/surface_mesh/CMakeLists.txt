@@ -1,0 +1,4 @@
+add_subdirectory(algorithms)
+add_subdirectory(eigen_algorithms)
+add_subdirectory(scene_graph)
+add_subdirectory(data_structure)

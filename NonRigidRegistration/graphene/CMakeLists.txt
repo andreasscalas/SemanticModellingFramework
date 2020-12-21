@@ -1,0 +1,7 @@
+add_subdirectory(geometry) 
+add_subdirectory(utility)
+add_subdirectory(gl)
+add_subdirectory(character)
+add_subdirectory(surface_mesh)
+add_subdirectory(scene_graph)
+add_subdirectory(pointset_processing)

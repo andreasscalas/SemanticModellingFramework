@@ -1,0 +1,493 @@
+#include "P2C_window.h"
+#include "config/Config.h"
+#include <io/Loader.h>
+#include <imgui.h>
+#include <graphene/scene_graph/Object_node.h>
+
+namespace p2c
+{
+
+P2C_window::P2C_window(const char *title, int width, int height) :
+    Window(title, width, height),
+    scene_graph_(&gl_state_),
+    pause_(false)
+{
+    if (Config::instance()->general().b_hidewindow)
+    {
+        glfwHideWindow(m_window);
+    }
+
+    //init gl/cl state and shaders/kernels
+    const std::string &argv0 = Config::instance()->get_argv()[0];
+
+#ifdef HAVE_OCL
+    if (! cl::CL_state::instance()->init(argv0.c_str()) )
+        exit(EXIT_FAILURE);
+#endif
+
+    gl_state_.init(argv0.c_str());
+
+    //init mouse helper
+    for (int i=0; i < 7; ++i)
+    {
+        button_down_[i] = false;
+    }
+    modifiers_ = -1;
+
+    //set clear color
+    const Vec4f &cc = gl_state_.clear_color_;
+    glClearColor(cc[0],cc[1],cc[2],cc[3]);
+
+    // add lights
+    std::vector<gl::Light> light_sources;
+    Vec3f light_color(0.6);
+    light_sources.push_back( gl::Light( Vec3f( 0.1f, -0.1f, -0.2f), light_color )); // right-top-front view
+    light_sources.push_back( gl::Light( Vec3f(-0.1f, -0.1f, -0.2f), light_color )); // left-top-front view
+    light_sources.push_back( gl::Light( Vec3f( 0.0f,  0.1f, -0.1f), light_color )); // front view
+    gl_state_.setup_lights(light_sources);
+
+    //initial gl states
+    glEnable(GL_DEPTH_TEST);
+    glDisable(GL_BLEND);
+
+    //load files
+    io::Loader loader(gl_state_, scene_graph_);
+    if(loader.load(Config::instance()->input_filenames()))
+    {
+        geometry::Bounding_box bbox = scene_graph_.bbox();
+        gl_state_.set_bbox(bbox);
+        gl_state_.view_all();
+        trackball_.init(bbox.center(), bbox.size()*0.5f);
+    }
+
+    //init trackball
+    trackball_.set_dimensions(m_width, m_height);
+
+}
+
+void P2C_window::update()
+{
+    Window::render_frame();
+}
+
+bool P2C_window::select_n_landmarks(size_t n_landmarks, const std::string& name_of_node)
+{
+    if (Config::instance()->general().b_hidewindow)
+    {
+        glfwShowWindow(m_window);
+    }
+
+    scene_graph::Object_node* selected_node = scene_graph_.select_node(name_of_node);
+    if (selected_node == nullptr)
+    {
+        std::cerr << "P2C_window::select_n_landmarks: [ERROR] No node with the name \"" << name_of_node << "\"." << std::endl;
+        return false;
+    }
+
+    reset_view();
+
+
+    while (selected_node->get_num_landmarks() < n_landmarks)
+    {
+        task_ss_ << "Select " << n_landmarks << " landmarks.\n\n"
+                 << "Hints:\n"
+                 << "  -Use LMB to rotate, RMB to translate (z) and MMB to pan (x,y). \n"
+                 << "  -Use CTRL + LMB to fly to the position under the cursor.\n"
+                 << "  -Use CTRL + RMB to select a landmark.\n"
+                 << "  -Use CTRL + Z (or Y) to revert landmark.\n"
+                 << std::endl;
+        Window::render_frame();
+        task_ss_.str("");
+    }
+
+    if (Config::instance()->general().b_hidewindow)
+    {
+        glfwHideWindow(m_window);
+    }
+
+    return true;
+}
+
+bool P2C_window::print_message_and_pause(const std::string& msg)
+{
+    if (Config::instance()->general().b_hidewindow)
+    {
+        glfwShowWindow(m_window);
+    }
+
+    glClearColor(1.0f, 1.0f, 0.7f, 1.0f);
+
+    pause_ = true;
+
+    while (pause_)
+    {
+        task_ss_ << msg
+                 << "\n"
+                 << "  -press 'c' to continue. \n"
+                 << std::endl;
+        Window::render_frame();
+        task_ss_.str("");
+    }
+
+    //set clear color
+    const Vec4f &cc = gl_state_.clear_color_;
+    glClearColor(cc[0],cc[1],cc[2],cc[3]);
+
+    if (Config::instance()->general().b_hidewindow)
+    {
+        glfwHideWindow(m_window);
+    }
+
+    return true;
+}
+
+void P2C_window::reset_view()
+{
+    geometry::Bounding_box bbox = scene_graph_.bbox(true);
+    trackball_.init(bbox.center(), bbox.size() * 0.5f);
+    gl_state_.set_bbox(bbox);
+    gl_state_.view_all();
+}
+
+void P2C_window::set_error_and_run(const std::string &error_msg)
+{
+    if (error_msg.empty())
+    {
+        task_ss_ << "\nERROR occured. Check console for more information!\n\n";
+    }
+    else
+    {
+        task_ss_ << "\n";
+        task_ss_ << error_msg;
+        task_ss_ << "\n";
+    }
+    glClearColor(0.7f, 0.1f, 0.0f, 1.0f);
+    run();
+}
+
+void P2C_window::set_done_and_run()
+{
+
+    task_ss_ << "\n";
+    task_ss_ << "Processing done.\n";
+    task_ss_ << "\n";
+    glClearColor(0.1f, 0.7f, 0.0f, 1.0f);
+    run();
+}
+
+void P2C_window::display()
+{
+    glClear(GL_DEPTH_BUFFER_BIT | GL_COLOR_BUFFER_BIT);
+
+    gl_state_.update_matrices();
+
+    scene_graph_.draw();
+}
+
+void P2C_window::processImGUI()
+{
+
+    ImGui::TextUnformatted(task_ss_.str().c_str());
+
+
+    scene_graph::Object_node* selected_node = scene_graph_.selected_node();
+    if (selected_node != nullptr)
+    {
+        ImGui::Text("Selected Node: \n%s", selected_node->name().c_str());
+        ImGui::Text("Landmarks: %d", selected_node->get_num_landmarks());
+
+        const std::vector<std::string> &draw_modes = selected_node->get_draw_modes_menu();
+
+        const char* items[draw_modes.size()];
+        for (size_t i=0; i < draw_modes.size(); ++i)
+        {
+            items[i] = draw_modes[i].c_str();
+        }
+
+        int t=selected_node->get_draw_mode_idx();
+        ImGui::Combo("", &t,items,draw_modes.size());
+        selected_node->set_draw_mode(t);
+    }
+    else
+    {
+        ImGui::Text("Selected Node:\nnone");
+        ImGui::Text("Landmarks: 0");
+
+        const char* items[] = { "" };
+
+        int t=0;
+        ImGui::Combo("", &t,items,0);
+    }
+
+}
+
+void P2C_window::resize(int width, int height)
+{
+    m_width  = width;
+    m_height = height;
+
+    gl_state_.set_width((float)width);
+    gl_state_.set_height((float)height);
+    gl_state_.update_projection();
+    glViewport(0,0, width, height);
+
+    trackball_.set_dimensions(width, height);
+}
+
+void P2C_window::keyboard(int key, int code, int action, int mods)
+{
+    if (action == GLFW_PRESS)
+    {
+        switch (key)
+        {
+        case GLFW_KEY_ESCAPE:
+            exit(0);
+            break;
+        case GLFW_KEY_R://reset view
+            reset_view();
+            break;
+        case GLFW_KEY_V://toggle visibility of node
+        {
+            scene_graph::Object_node* node = scene_graph_.selected_node();
+            if (node != nullptr)
+                node->set_visible(!node->visible());
+            break;
+        }
+        case GLFW_KEY_SPACE:
+        {
+            if (mods == GLFW_MOD_CONTROL)
+            {
+                std::vector<scene_graph::Object_node*> objects = scene_graph_.objects();
+
+                if (objects.empty())
+                    break;
+
+                scene_graph::Object_node* node = nullptr;
+
+                size_t i;
+                for (i=0; i < objects.size(); ++i)
+                {
+                    node = objects[i];
+                    if (node->is_target())
+                        break;
+                }
+
+                node->set_target(false);
+
+                if (i >= objects.size()-1)
+                {
+                    node = objects[0];
+                }
+                else
+                {
+                    node = objects[i+1];
+                }
+
+                node->set_target(true);
+            }
+            break;
+        }
+        case GLFW_KEY_Z:
+        {
+            if (mods == GLFW_MOD_CONTROL)
+            {
+                scene_graph::Object_node *node = scene_graph_.selected_node();
+                if (node != nullptr)
+                {
+                    node->undo_last_landmark();
+                }
+            }
+            break;
+        }
+        case GLFW_KEY_C:
+        {
+            pause_ = false;
+            break;
+        }
+        default:
+            break;
+        }
+    }
+
+}
+
+void P2C_window::character(unsigned int )
+{
+
+}
+
+void P2C_window::mouse(int button, int action, int mods)
+{
+    modifiers_ = mods;
+
+    if (action == GLFW_PRESS)
+    {
+        button_down_[button] = true;
+
+
+        if (button == GLFW_MOUSE_BUTTON_LEFT && modifiers_ == GLFW_MOD_CONTROL)
+        {
+            double x, y;
+            cursorPos(x, y);
+            fly_to((int)x, (int)y);
+        }
+
+        else if (button == GLFW_MOUSE_BUTTON_LEFT && modifiers_ == GLFW_MOD_SHIFT)
+        {
+            double x, y;
+            cursorPos(x, y);
+            select_object((int)x, (int)y);
+        }
+
+        else if (button == GLFW_MOUSE_BUTTON_RIGHT && modifiers_ == GLFW_MOD_CONTROL)
+        {
+            double x, y;
+            cursorPos(x, y);
+            select_landmark((int)x, (int)y);
+        }
+
+        else if (button == GLFW_MOUSE_BUTTON_RIGHT && modifiers_ == GLFW_MOD_CONTROL)
+        {
+            double x, y;
+            cursorPos(x, y);
+            select_landmark((int)x, (int)y);
+        }
+
+        else if (button == GLFW_MOUSE_BUTTON_MIDDLE)
+        {
+            double x, y;
+            cursorPos(x,y);
+            trackball_.start_translate(x,y,0);
+        }
+
+        else if (button == GLFW_MOUSE_BUTTON_LEFT)
+        {
+            double x, y;
+            cursorPos(x,y);
+            trackball_.start_rotation((int) x, (int)y);
+        }
+
+        else if (button == GLFW_MOUSE_BUTTON_RIGHT)
+        {
+            double x, y;
+            cursorPos(x,y);
+            trackball_.start_translate(0,0,y);
+        }
+    }
+    else if (action == GLFW_RELEASE)
+    {
+        button_down_[button] = false;
+    }
+}
+
+
+void P2C_window::motion(double x, double y)
+{
+
+    if (button_down_[GLFW_MOUSE_BUTTON_MIDDLE])
+    {
+        double x, y;
+        cursorPos(x,y);
+        gl_state_.translate_camera(trackball_.translate(x,y,0, gl_state_.get_camera().eye_));
+    }
+
+    else if (button_down_[GLFW_MOUSE_BUTTON_LEFT] && modifiers_ == 0)
+    {
+        trackball_.rotation((int) x, (int) y);
+        gl_state_.model_ = trackball_.get_model();
+        trackball_.start_rotation((int) x, (int)y);
+    }
+
+    else if (button_down_[GLFW_MOUSE_BUTTON_RIGHT] && !(modifiers_ & GLFW_MOD_CONTROL))
+    {
+        double x, y;
+        cursorPos(x,y);
+        gl_state_.translate_camera(trackball_.translate(0,0,y, gl_state_.get_camera().eye_));
+    }
+
+}
+
+void P2C_window::scroll(double , double y)
+{
+    const Vec3f t(0.0f,0.0f,(float)y);
+    gl_state_.translate_camera(0.1f * scene_graph_.bbox(false).size() * t);
+}
+
+bool P2C_window::pick(int x, int y, Vec3f& result)
+{
+    // get viewport data
+    GLint viewport[4];
+    glGetIntegerv(GL_VIEWPORT, viewport);
+
+    // take into account highDPI scaling
+    x *= m_scaling;
+    y *= m_scaling;
+
+    // in OpenGL y=0 is at the 'bottom'
+    y = viewport[3] - y;
+
+    // read depth buffer value at (x, y_new)
+    float zf;
+    glReadPixels(x, y, 1, 1, GL_DEPTH_COMPONENT, GL_FLOAT, &zf);
+
+    if (zf != 1.0f)
+    {
+        float xf = ((float)x - (float) viewport[0]) / ((float) viewport[2]) * 2.0f - 1.0f;
+        float yf = ((float)y - (float) viewport[1]) / ((float) viewport[3]) * 2.0f - 1.0f;
+        zf = zf * 2.0f - 1.0f;
+
+        Vec4f p    = inverse(gl_state_.get_modelviewproj()) * Vec4f(xf, yf, zf, 1.0f);
+        p /= p[3];
+
+        result = Vec3f(p[0], p[1], p[2]);
+
+        return true;
+    }
+
+
+    return false;
+}
+
+void P2C_window::fly_to(int x, int y)
+{
+    Vec3f p;
+    if (pick(x,y,p))
+    {
+        trackball_.set_rotation_center(affine_transform(gl_state_.get_model() ,p));
+        gl_state_.fly_to(p);
+    }
+}
+
+void P2C_window::select_object(int x, int y)
+{
+    Vec3f p;
+    if (pick(x,y,p))
+    {
+        scene_graph_.select_node(p);
+    }
+}
+
+
+void P2C_window::select_landmark(int x, int y)
+{
+
+    Vec3f p;
+    if (pick(x,y,p))
+    {
+        scene_graph::Object_node *selected_node = scene_graph_.selected_node();
+        if (selected_node == nullptr)
+        {
+            scene_graph_.select_node(p);
+            selected_node = scene_graph_.selected_node();
+        }
+
+        if (selected_node == nullptr)
+        {
+            std::cerr << "P2C_window::select_landmark: [ERROR] Cannot select landmark. No object found/selected" << std::endl;
+            return;
+        }
+        selected_node->select_landmark(p);
+    }
+}
+
+}

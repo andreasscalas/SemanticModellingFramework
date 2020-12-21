@@ -1,0 +1,105 @@
+/*! \mainpage Characterfitting
+
+\section intro_sec Introduction
+
+The points2character application creates a ready-to-animate character from a 3D point cloud.
+
+\section compile_sec Building the source code
+
+Dependencies:
+    - OpenCL (required, but usually provided by GPU driver)
+    - OpenCV (required, 3.2 or greater)
+    - dlib (required; git clone https://github.com/davisking/dlib)
+    - FBX SDK (optional, needed for fbx file export)
+
+
+\subsection linux_build Linux
+
+Build and install dependencies:
+
+dlib:
+-# git clone https://github.com/davisking/dlib
+-# cd dlib
+-# mkdir build && cd build
+-# cmake ..
+-# make
+-# sudo make install 
+
+OpenCV:
+
+- sudo apt install libopencv-dev
+
+
+Optional FBX SDK:
+-# Download FBX SDK from Autodesk homepage (https://www.autodesk.com/products/fbx/overview)
+-# Extract
+-# Install by executing ./fbx*****_fbxsdk_linux <install_dir>
+-# Copy ONLY THE CORRECT libfbxsdk.a to external/fbxsdk/lib (make sure to use the correct architecture)
+-# Copy the include directory to external/fbxsdk/
+
+
+Build the program starting from the project directory using cmake:
+-# mkdir build
+-# cd build
+-# cmake ..
+-# make
+
+\subsection windows_build Windows
+
+Windows is currently not supported.
+
+\subsection deploy Deployment
+
+In the build directory is a simple deployment script.
+One can use this script by executing 
+    ./deploy.sh <build_dir> <dst_dir>
+
+The program is then deployed to dst_dir.
+    
+
+\subsection start Usage
+
+\subsubsection simple_start Simple
+
+The easiest way to start the pipeline is using the start script.
+
+Preparation:
+Edit the start.sh script and fill in environment variables for CharacterGenerator_DB and Photoscan/MetaShape.
+
+Start:
+./start.sh <character_height> <body_scan_dir> [<face_scan_dir>]
+
+The face_scan_dir argument is optional to incorparate an additional face scan.
+
+\subsubsection advanced_start Advanced
+
+One can also start the pipeline by directly starting the executable points2character.
+However, this does not automatically convert the raw images and does not compute the point cloud. 
+Therefore, it is assumed that these steps were already performed.
+
+\subsection config Configuration
+
+\subsubsection cmd_line Command line options
+
+- '-c <cfg_file>' or '- -config=<cfg_file>': [Required] Defines the configuration file.
+- '-t <chargen_dir>': [Required] Defines the CharacterGenerator_DB directory.
+- '-b <body_dir>': [Required] Defines the project directory of the body scan.
+- '-f <face_dir>': [Optional] Defines the project directory of the face scan.
+- '-o <output_file>': [Optional] Defines the output file (file ending determines file format; either bim or fbx).
+- '-h <height>': [Optional] Scales the character to height at the end of the pipeline.
+- '- -hidewindow': [Optional] Hides the window during fitting (window is shown for user input)
+
+These command line options can be used with the start script (start.sh) as well.
+
+\subsubsection config_file Configuration file
+
+The application is configurable via a simple configuration file format (.cfg).
+There is a default configuration file in the binary directory (p2c_config.cfg).
+
+The parameters are described in the default configuration file.
+
+
+
+
+
+ */
