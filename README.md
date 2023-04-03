@@ -27,8 +27,11 @@ Fetch the repository:
 
 Configure and build:
 
-    $ cd SemanticModellingFramework && mkdir build && cd build && cmake .. -DQt5_DIR=PATH-TO-Qt5 -DVTK_DIR=PATH-TO-VTK -DEIGEN_DIR=PATH-TO-EIGEN && make
+    $ cd SemanticModellingFramework && mkdir build && cd build && cmake .. -DQt5_DIR=PATH-TO-Qt5 -DVTK_DIR=PATH-TO-VTK -DEIGEN_H=PATH-TO-EIGEN -DMATHGEOLIB_H:PATH-TO-MATHGEOLIB-INCLUDE -DORTOOLS_H:PATH-TO-ORTOOLS-INCLUDE -DORTOOLS_LIB:PATH-TO-ORTOOLS-LIBRARY 
+-DRAPIDJSON_H:PATH-TO-RAPIDJSON-INCLUDE -DRapidJSON_DIR:PATH-TO-RAPIDJSON-CMAKE 
+-DSCIP_H:PATH=PATH-TO-SCIP-INCLUDE -DSCIP_LIB:PATH=PATH-TO-SCIP-LIBRARY && make
+
 
 Run the app:
 
-    $ ./ParametricTemplate
+    $ ./SemanticModellingFramework
