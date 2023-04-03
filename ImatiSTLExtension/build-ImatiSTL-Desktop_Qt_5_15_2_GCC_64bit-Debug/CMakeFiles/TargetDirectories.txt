@@ -1,0 +1,3 @@
+/home/andreas/Documenti/Progetti/andreaslib/ImatiSTLExtension/build-ImatiSTL-Desktop_Qt_5_15_2_GCC_64bit-Debug/CMakeFiles/rebuild_cache.dir
+/home/andreas/Documenti/Progetti/andreaslib/ImatiSTLExtension/build-ImatiSTL-Desktop_Qt_5_15_2_GCC_64bit-Debug/CMakeFiles/edit_cache.dir
+/home/andreas/Documenti/Progetti/andreaslib/ImatiSTLExtension/build-ImatiSTL-Desktop_Qt_5_15_2_GCC_64bit-Debug/CMakeFiles/ImatiSTL-lib.dir

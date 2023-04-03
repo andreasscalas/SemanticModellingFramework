@@ -1,0 +1,1020 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1217</width>
+    <height>829</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1217</width>
+    <height>829</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="sizeConstraint">
+       <enum>QLayout::SetNoConstraint</enum>
+      </property>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <property name="sizeConstraint">
+         <enum>QLayout::SetNoConstraint</enum>
+        </property>
+        <item>
+         <widget class="QVTKOpenGLNativeWidget" name="qvtkWidget" native="true">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>860</width>
+            <height>720</height>
+           </size>
+          </property>
+          <property name="baseSize">
+           <size>
+            <width>0</width>
+            <height>720</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="Line" name="line">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_3" stretch="0">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QWidget" name="genericPalette" native="true">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>1</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>317</width>
+              <height>720</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>300</width>
+              <height>16777215</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <property name="sizeConstraint">
+         <enum>QLayout::SetNoConstraint</enum>
+        </property>
+        <item>
+         <widget class="QLabel" name="verticesLabel">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="baseSize">
+           <size>
+            <width>0</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Vertices:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="edgesLabel">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="baseSize">
+           <size>
+            <width>0</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Edges:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="trianglesLabel">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="baseSize">
+           <size>
+            <width>0</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Triangles:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="cageVerticesLabel">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="baseSize">
+           <size>
+            <width>0</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Cage vertices:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="cageEdgesLabel">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="baseSize">
+           <size>
+            <width>0</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Cage edges:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="cageTrianglesLabel">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="baseSize">
+           <size>
+            <width>0</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Cage triangles:</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="movable">
+    <bool>false</bool>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>30</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="floatable">
+    <bool>false</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionCamera"/>
+   <addaction name="actionVisible"/>
+   <addaction name="actionVerticesSelection"/>
+   <addaction name="actionVerticesDeselection"/>
+   <addaction name="actionMeshDeformation"/>
+   <addaction name="actionStretch"/>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1217</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <widget class="QMenu" name="menuOpen">
+     <property name="title">
+      <string>Open</string>
+     </property>
+     <property name="icon">
+      <iconset resource="../Icons/icons.qrc">
+       <normaloff>:/Icons/open.png</normaloff>:/Icons/open.png</iconset>
+     </property>
+     <addaction name="actionOpenMesh"/>
+     <addaction name="actionOpenCage"/>
+     <addaction name="actionOpenBC"/>
+     <addaction name="actionOpenConstraints"/>
+     <addaction name="actionOpenFragment"/>
+    </widget>
+    <widget class="QMenu" name="menuSave">
+     <property name="title">
+      <string>Save</string>
+     </property>
+     <property name="icon">
+      <iconset resource="../Icons/icons.qrc">
+       <normaloff>:/Icons/filesave.png</normaloff>:/Icons/filesave.png</iconset>
+     </property>
+     <addaction name="actionSaveMesh"/>
+     <addaction name="actionSaveCage"/>
+     <addaction name="actionSaveBC"/>
+     <addaction name="actionSaveConstraints"/>
+    </widget>
+    <widget class="QMenu" name="menuClear">
+     <property name="title">
+      <string>Clear</string>
+     </property>
+     <property name="icon">
+      <iconset resource="../Icons/icons.qrc">
+       <normaloff>:/Icons/clear.png</normaloff>:/Icons/clear.png</iconset>
+     </property>
+     <addaction name="actionClearAll"/>
+     <addaction name="actionClearMesh"/>
+     <addaction name="actionClearCage"/>
+     <addaction name="actionConstraints"/>
+     <addaction name="actionClearCamera"/>
+    </widget>
+    <addaction name="separator"/>
+    <addaction name="separator"/>
+    <addaction name="menuOpen"/>
+    <addaction name="menuSave"/>
+    <addaction name="separator"/>
+    <addaction name="menuClear"/>
+    <addaction name="separator"/>
+    <addaction name="actionClose"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>&amp;Edit</string>
+    </property>
+    <widget class="QMenu" name="menuChoose_BC">
+     <property name="title">
+      <string>Choose BC</string>
+     </property>
+     <addaction name="actionMean"/>
+     <addaction name="actionGreen"/>
+    </widget>
+    <addaction name="actionUndo"/>
+    <addaction name="actionRedo"/>
+    <addaction name="separator"/>
+    <addaction name="actionComputeCoords"/>
+    <addaction name="actionGenerate"/>
+    <addaction name="actionCheckConstraints"/>
+    <addaction name="menuChoose_BC"/>
+   </widget>
+   <widget class="QMenu" name="menuView">
+    <property name="title">
+     <string>View</string>
+    </property>
+    <widget class="QMenu" name="menuMesh">
+     <property name="title">
+      <string>Mesh</string>
+     </property>
+     <addaction name="actionShowMesh"/>
+     <addaction name="actionShowMeshSurface"/>
+     <addaction name="actionShowMeshWireframe"/>
+     <addaction name="actionShowMeshPoints"/>
+     <addaction name="actionShowMeshAnnotations"/>
+     <addaction name="actionMeshColor"/>
+    </widget>
+    <widget class="QMenu" name="menuCage">
+     <property name="title">
+      <string>Cage</string>
+     </property>
+     <addaction name="actionShowCage"/>
+     <addaction name="actionShowCageSurface"/>
+     <addaction name="actionCageColor"/>
+     <addaction name="actionShowCageWireframe"/>
+     <addaction name="actionShowCagePoints"/>
+    </widget>
+    <addaction name="separator"/>
+    <addaction name="menuMesh"/>
+    <addaction name="menuCage"/>
+    <addaction name="separator"/>
+    <addaction name="separator"/>
+    <addaction name="actionSlicerPalette"/>
+    <addaction name="actionInfoPalette"/>
+    <addaction name="actionLayerDialog"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuView"/>
+  </widget>
+  <action name="actionVerticesSelection">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../Icons/icons.qrc">
+     <normaloff>:/Icons/verticesSelection.png</normaloff>:/Icons/verticesSelection.png</iconset>
+   </property>
+   <property name="text">
+    <string>VerticesSelection</string>
+   </property>
+   <property name="toolTip">
+    <string>Vertices selection</string>
+   </property>
+   <property name="shortcut">
+    <string>Shift+S</string>
+   </property>
+  </action>
+  <action name="actionVerticesDeselection">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../Icons/icons.qrc">
+     <normaloff>:/Icons/verticesDeselection.png</normaloff>:/Icons/verticesDeselection.png</iconset>
+   </property>
+   <property name="text">
+    <string>VerticesDeselection</string>
+   </property>
+   <property name="toolTip">
+    <string>Vertices deselection</string>
+   </property>
+   <property name="shortcut">
+    <string>Shift+E</string>
+   </property>
+  </action>
+  <action name="actionMeshDeformation">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../Icons/icons.qrc">
+     <normaloff>:/Icons/verticesDeformation.png</normaloff>:/Icons/verticesDeformation.png</iconset>
+   </property>
+   <property name="text">
+    <string>MeshDeformation</string>
+   </property>
+   <property name="toolTip">
+    <string>Mesh deformation</string>
+   </property>
+   <property name="shortcut">
+    <string>Shift+D</string>
+   </property>
+  </action>
+  <action name="actionCamera">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../Icons/icons.qrc">
+     <normaloff>:/Icons/camera.png</normaloff>:/Icons/camera.png</iconset>
+   </property>
+   <property name="text">
+    <string>Camera</string>
+   </property>
+   <property name="toolTip">
+    <string>Change the visualization to the only camera (no selection nor deformations)</string>
+   </property>
+   <property name="shortcut">
+    <string>Shift+C</string>
+   </property>
+  </action>
+  <action name="actionVisible">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../Icons/icons.qrc">
+     <normaloff>:/Icons/visible_icon.png</normaloff>:/Icons/visible_icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Select only visible points and triangles</string>
+   </property>
+   <property name="toolTip">
+    <string>Select only visible points and triangles</string>
+   </property>
+   <property name="shortcut">
+    <string>Shift+V</string>
+   </property>
+  </action>
+  <action name="actionDelete">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../Icons/icons.qrc">
+     <normaloff>:/Icons/Eraser-icon.png</normaloff>:/Icons/Eraser-icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Unselect previous selected triangles</string>
+   </property>
+   <property name="toolTip">
+    <string>Unselect previous selected triangles</string>
+   </property>
+  </action>
+  <action name="actionRectSelection">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../Icons/icons.qrc">
+     <normaloff>:/Icons/triangle_rect.png</normaloff>:/Icons/triangle_rect.png</iconset>
+   </property>
+   <property name="text">
+    <string>Select triangles on a rectangle area</string>
+   </property>
+   <property name="toolTip">
+    <string>Select triangles on a rectangle area</string>
+   </property>
+  </action>
+  <action name="actionLassoSelection">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../Icons/icons.qrc">
+     <normaloff>:/Icons/select_lasso.png</normaloff>:/Icons/select_lasso.png</iconset>
+   </property>
+   <property name="text">
+    <string>Select triangles on a lasso-selected area</string>
+   </property>
+   <property name="toolTip">
+    <string>Select triangles on a lasso-selected area</string>
+   </property>
+  </action>
+  <action name="actionBrushSelection">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../Icons/icons.qrc">
+     <normaloff>:/Icons/lineSelector.png</normaloff>:/Icons/lineSelector.png</iconset>
+   </property>
+   <property name="text">
+    <string>Select triangles usin a brush stroke</string>
+   </property>
+   <property name="toolTip">
+    <string>Select triangles usin a brush stroke</string>
+   </property>
+  </action>
+  <action name="actionColor">
+   <property name="icon">
+    <iconset resource="../Icons/icons.qrc">
+     <normaloff>:/Icons/color.png</normaloff>:/Icons/color.png</iconset>
+   </property>
+   <property name="text">
+    <string>Select model and cage color</string>
+   </property>
+   <property name="toolTip">
+    <string>Select model and cage color</string>
+   </property>
+  </action>
+  <action name="actionAnnotation">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../Icons/icons.qrc">
+     <normaloff>:/Icons/tag-icon.png</normaloff>:/Icons/tag-icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Annotate a set of selected triangles</string>
+   </property>
+   <property name="toolTip">
+    <string>Annotate a set of selected triangles</string>
+   </property>
+  </action>
+  <action name="actionSaveAnnotations">
+   <property name="text">
+    <string>Annotations</string>
+   </property>
+  </action>
+  <action name="actionSaveBC">
+   <property name="text">
+    <string>BC</string>
+   </property>
+  </action>
+  <action name="actionSaveCage">
+   <property name="text">
+    <string>Cage</string>
+   </property>
+  </action>
+  <action name="actionSaveMesh">
+   <property name="text">
+    <string>Mesh</string>
+   </property>
+  </action>
+  <action name="actionOpenAnnotations">
+   <property name="text">
+    <string>Annotations</string>
+   </property>
+  </action>
+  <action name="actionOpenCage">
+   <property name="text">
+    <string>Cage</string>
+   </property>
+  </action>
+  <action name="actionOpenMesh">
+   <property name="text">
+    <string>Template</string>
+   </property>
+  </action>
+  <action name="actionAnnotate">
+   <property name="icon">
+    <iconset resource="../Icons/icons.qrc">
+     <normaloff>:/Icons/tag-icon.png</normaloff>:/Icons/tag-icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Annotate</string>
+   </property>
+  </action>
+  <action name="actionRedo">
+   <property name="icon">
+    <iconset resource="../Icons/icons.qrc">
+     <normaloff>:/redo.png</normaloff>:/redo.png</iconset>
+   </property>
+   <property name="text">
+    <string>Redo</string>
+   </property>
+  </action>
+  <action name="actionUndo">
+   <property name="icon">
+    <iconset resource="../Icons/icons.qrc">
+     <normaloff>:/undo.ico</normaloff>:/undo.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Undo</string>
+   </property>
+  </action>
+  <action name="actionSlicer">
+   <property name="text">
+    <string>Slicer view</string>
+   </property>
+  </action>
+  <action name="actionAnnotator">
+   <property name="text">
+    <string>Annotator view</string>
+   </property>
+  </action>
+  <action name="actionDeformator">
+   <property name="text">
+    <string>Deformer view</string>
+   </property>
+  </action>
+  <action name="actionClose">
+   <property name="text">
+    <string>Close</string>
+   </property>
+  </action>
+  <action name="actionClearMesh">
+   <property name="text">
+    <string>Mesh</string>
+   </property>
+  </action>
+  <action name="actionClearCage">
+   <property name="text">
+    <string>Cage</string>
+   </property>
+  </action>
+  <action name="actionClearSelections">
+   <property name="text">
+    <string>Selections</string>
+   </property>
+  </action>
+  <action name="actionOpenBC">
+   <property name="text">
+    <string>BC</string>
+   </property>
+  </action>
+  <action name="actionClearAnnotations">
+   <property name="text">
+    <string>Annotations</string>
+   </property>
+  </action>
+  <action name="actionClearAll">
+   <property name="text">
+    <string>All</string>
+   </property>
+  </action>
+  <action name="actionComputeCoords">
+   <property name="text">
+    <string>Link cage and template</string>
+   </property>
+  </action>
+  <action name="actionShowMeshWireframe">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Wireframe</string>
+   </property>
+  </action>
+  <action name="actionShowCageSurface">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Surface</string>
+   </property>
+  </action>
+  <action name="actionShowMesh">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Show</string>
+   </property>
+  </action>
+  <action name="actionShowCage">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Show</string>
+   </property>
+  </action>
+  <action name="actionMeshColor">
+   <property name="text">
+    <string>Change color</string>
+   </property>
+  </action>
+  <action name="actionCageColor">
+   <property name="text">
+    <string>Change color</string>
+   </property>
+  </action>
+  <action name="actionSlicerPalette">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Slicer palette</string>
+   </property>
+  </action>
+  <action name="actionOpenOntology">
+   <property name="text">
+    <string>Ontology</string>
+   </property>
+  </action>
+  <action name="actionGenerate">
+   <property name="text">
+    <string>Generate cage</string>
+   </property>
+  </action>
+  <action name="actionClearCamera">
+   <property name="text">
+    <string>Camera</string>
+   </property>
+  </action>
+  <action name="actionCheckConstraints">
+   <property name="text">
+    <string>Check constraint</string>
+   </property>
+  </action>
+  <action name="actionAddVerticesRectangle">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../Icons/icons.qrc">
+     <normaloff>:/Icons/point_rect.png</normaloff>:/Icons/point_rect.png</iconset>
+   </property>
+   <property name="text">
+    <string>Add Vertices In Rectangle</string>
+   </property>
+  </action>
+  <action name="actionConstraints">
+   <property name="text">
+    <string>Constraints</string>
+   </property>
+  </action>
+  <action name="actionShowMeshPoints">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Points</string>
+   </property>
+   <property name="toolTip">
+    <string>Show points</string>
+   </property>
+  </action>
+  <action name="actionShowMeshSurface">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Surface</string>
+   </property>
+   <property name="toolTip">
+    <string>Show surface</string>
+   </property>
+  </action>
+  <action name="actionShowCageWireframe">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Wireframe</string>
+   </property>
+  </action>
+  <action name="actionShowCagePoints">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Points</string>
+   </property>
+  </action>
+  <action name="actionLineSelection">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../Icons/icons.qrc">
+     <normaloff>:/Icons/polyline.png</normaloff>:/Icons/polyline.png</iconset>
+   </property>
+   <property name="text">
+    <string>Select Line</string>
+   </property>
+   <property name="toolTip">
+    <string>Select Line</string>
+   </property>
+  </action>
+  <action name="actionStretch">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../Icons/icons.qrc">
+     <normaloff>:/Icons/stretch.png</normaloff>:/Icons/stretch.png</iconset>
+   </property>
+   <property name="text">
+    <string>actionStretch</string>
+   </property>
+  </action>
+  <action name="actionMean">
+   <property name="text">
+    <string>Mean Value</string>
+   </property>
+  </action>
+  <action name="actionGreen">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Green</string>
+   </property>
+  </action>
+  <action name="actionShowMeshAnnotations">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Annotations</string>
+   </property>
+  </action>
+  <action name="actionInfoPalette">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Info palette</string>
+   </property>
+  </action>
+  <action name="actionOpenConstraints">
+   <property name="text">
+    <string>Constraints</string>
+   </property>
+  </action>
+  <action name="actionSaveConstraints">
+   <property name="text">
+    <string>Constraints</string>
+   </property>
+  </action>
+  <action name="actionOpenFragment">
+   <property name="text">
+    <string>Mesh</string>
+   </property>
+  </action>
+  <action name="actionLayerDialog">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Layer dialog</string>
+   </property>
+  </action>
+  <action name="actionChange_annotation_transparendcy">
+   <property name="text">
+    <string>Change annotation transparency</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QVTKOpenGLNativeWidget</class>
+   <extends>QWidget</extends>
+   <header location="global">QVTKOpenGLNativeWidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../Icons/icons.qrc"/>
+ </resources>
+ <connections/>
+</ui>

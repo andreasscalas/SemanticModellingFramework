@@ -1,0 +1,29 @@
+<RCC>
+    <qresource prefix="/Icons">
+        <file>fileopen.png</file>
+        <file>filesave.png</file>
+        <file>verticesDeformation.png</file>
+        <file>verticesSelection.png</file>
+        <file>verticesDeselection.png</file>
+        <file>camera.png</file>
+        <file>rotation.png</file>
+        <file>rototranslation.png</file>
+        <file>greenCoordinatesIcon.png</file>
+        <file>meanValueCoordinatesIcon.png</file>
+        <file>search.png</file>
+        <file>Eraser-icon.png</file>
+        <file>visible_icon.png</file>
+        <file>select_lasso.png</file>
+        <file>triangle-icon.png</file>
+        <file>open.png</file>
+        <file>clear.png</file>
+        <file>model.png</file>
+        <file>cage.png</file>
+        <file>rectSelection.png</file>
+        <file>polygonalLasso.png</file>
+        <file>lineSelector.png</file>
+        <file>color.png</file>
+        <file>tag-icon.png</file>
+        <file>transfer.png</file>
+    </qresource>
+</RCC>

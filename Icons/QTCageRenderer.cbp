@@ -1,0 +1,937 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+   <FileVersion major="1" minor="6" />
+   <Project>
+      <Option title="QTCageRenderer" />
+      <Option makefile_is_custom="1" />
+      <Option compiler="gcc" />
+      <Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\VTK-Build\;CMake Files\..\..\VTK-Build\lib\;CMake Files\..\..\VTK-Build\lib\cmake\;CMake Files\..\..\VTK-Build\lib\cmake\vtk-7.1\;CMake Files\..\..\VTK-Build\lib\cmake\vtk-7.1\Modules\;CMake Files\..\..\VTK\;CMake Files\..\..\VTK\CMake\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\Qt\;CMake Files\..\..\..\..\Qt\5.8\;CMake Files\..\..\..\..\Qt\5.8\gcc_64\;CMake Files\..\..\..\..\Qt\5.8\gcc_64\lib\;CMake Files\..\..\..\..\Qt\5.8\gcc_64\lib\cmake\;CMake Files\..\..\..\..\Qt\5.8\gcc_64\lib\cmake\Qt5\;CMake Files\..\..\..\..\Qt\5.8\gcc_64\lib\cmake\Qt5Widgets\;CMake Files\..\..\..\..\Qt\5.8\gcc_64\lib\cmake\Qt5Gui\;CMake Files\..\..\..\..\Qt\5.8\gcc_64\lib\cmake\Qt5Core\;CMake Files\Icons\;" />
+      <Build>
+      <Target title="all">
+         <Option working_dir="/home/andreas/Desktop/Projects/CageLab/cmake/Icons" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/andreas/Desktop/Projects/CageLab/cmake/Icons/Makefile&quot;  VERBOSE=1 all" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/andreas/Desktop/Projects/CageLab/cmake/Icons/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/andreas/Desktop/Projects/CageLab/cmake/Icons/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/andreas/Desktop/Projects/CageLab/cmake/Icons/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="edit_cache">
+         <Option working_dir="/home/andreas/Desktop/Projects/CageLab/cmake/Icons" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/andreas/Desktop/Projects/CageLab/cmake/Icons/Makefile&quot;  VERBOSE=1 edit_cache" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/andreas/Desktop/Projects/CageLab/cmake/Icons/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/andreas/Desktop/Projects/CageLab/cmake/Icons/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/andreas/Desktop/Projects/CageLab/cmake/Icons/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="rebuild_cache">
+         <Option working_dir="/home/andreas/Desktop/Projects/CageLab/cmake/Icons" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/andreas/Desktop/Projects/CageLab/cmake/Icons/Makefile&quot;  VERBOSE=1 rebuild_cache" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/andreas/Desktop/Projects/CageLab/cmake/Icons/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/andreas/Desktop/Projects/CageLab/cmake/Icons/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/andreas/Desktop/Projects/CageLab/cmake/Icons/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="QTCageRenderer">
+         <Option output="/home/andreas/Desktop/Projects/CageLab/cmake/Icons/QTCageRenderer" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/andreas/Desktop/Projects/CageLab/cmake/Icons" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DQT_CORE_LIB" />
+            <Add option="-DQT_GUI_LIB" />
+            <Add option="-DQT_WIDGETS_LIB" />
+            <Add option="-DvtkRenderingCore_AUTOINIT=3(vtkInteractionStyle,vtkRenderingFreeType,vtkRenderingOpenGL2)" />
+            <Add option="-DQT_NO_DEBUG" />
+            <Add directory="/home/andreas/Desktop/Projects/CageLab/cmake" />
+            <Add directory="/home/andreas/Desktop/Projects/CageLab/cmake/.." />
+            <Add directory="/home/andreas/Desktop/Projects/CageLab/cmake/../Deformation/include" />
+            <Add directory="/home/andreas/Desktop/Projects/CageLab/cmake/../ImatiSTL-4.2/include/ImatiSTL" />
+            <Add directory="/home/andreas/Desktop/Projects/CageLab/cmake/../ImatiSTL-4.2/include/Kernel" />
+            <Add directory="/home/andreas/Desktop/Projects/CageLab/cmake/../ImatiSTL-4.2/include/Rendering" />
+            <Add directory="/home/andreas/Desktop/Projects/CageLab/cmake/../ImatiSTL-4.2/include/TMesh" />
+            <Add directory="/home/andreas/Desktop/Projects/CageLab/cmake/../include" />
+            <Add directory="/home/andreas/Desktop/Projects/CageLab/cmake/Icons" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Charts/Core" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Common/Color" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Common/ComputationalGeometry" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Common/Core" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Common/DataModel" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Common/ExecutionModel" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Common/Math" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Common/Misc" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Common/System" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Common/Transforms" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Filters/Core" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Filters/Extraction" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Filters/General" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Filters/Geometry" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Filters/Hybrid" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Filters/Imaging" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Filters/Modeling" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Filters/Sources" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Filters/Statistics" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/GUISupport/Qt" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/IO/Core" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/IO/Image" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/IO/XML" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/IO/XMLParser" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Imaging/Color" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Imaging/Core" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Imaging/Fourier" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Imaging/General" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Imaging/Hybrid" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Imaging/Sources" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Infovis/Core" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Infovis/Layout" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Interaction/Style" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Interaction/Widgets" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Rendering/Annotation" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Rendering/Context2D" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Rendering/Core" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Rendering/FreeType" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Rendering/Label" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Rendering/OpenGL2" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Rendering/Volume" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/ThirdParty/alglib" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/ThirdParty/expat" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/ThirdParty/freetype" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/ThirdParty/glew" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/ThirdParty/jpeg" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/ThirdParty/lz4" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/ThirdParty/lz4/vtklz4" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/ThirdParty/png" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/ThirdParty/tiff" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/ThirdParty/tiff/vtktiff/libtiff" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/ThirdParty/zlib" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Utilities/DICOMParser" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Utilities/EncodeString" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Utilities/KWIML" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Utilities/KWSys" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Utilities/MetaIO" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Utilities/MetaIO/vtkmetaio" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Views/Core" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Views/Infovis" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Views/Qt" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Charts/Core" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Common/Color" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Common/ComputationalGeometry" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Common/Core" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Common/DataModel" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Common/ExecutionModel" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Common/Math" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Common/Misc" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Common/System" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Common/Transforms" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Filters/Core" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Filters/Extraction" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Filters/General" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Filters/Geometry" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Filters/Hybrid" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Filters/Imaging" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Filters/Modeling" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Filters/Sources" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Filters/Statistics" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/GUISupport/Qt" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/IO/Core" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/IO/Image" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/IO/XML" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/IO/XMLParser" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Imaging/Color" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Imaging/Core" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Imaging/Fourier" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Imaging/General" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Imaging/Hybrid" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Imaging/Sources" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Infovis/Core" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Infovis/Layout" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Interaction/Style" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Interaction/Widgets" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Rendering/Annotation" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Rendering/Context2D" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Rendering/Core" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Rendering/FreeType" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Rendering/Label" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Rendering/OpenGL2" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Rendering/Volume" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/ThirdParty/alglib" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/ThirdParty/expat" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/ThirdParty/freetype" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/ThirdParty/glew" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/ThirdParty/jpeg" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/ThirdParty/lz4" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/ThirdParty/lz4/vtklz4/lib" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/ThirdParty/png" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/ThirdParty/tiff" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/ThirdParty/zlib" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Utilities/DICOMParser" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Utilities/EncodeString" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Utilities/KWIML" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Utilities/KWSys" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Utilities/MetaIO" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Views/Core" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Views/Infovis" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Views/Qt" />
+            <Add directory="/home/andreas/Qt/5.8/gcc_64/./mkspecs/linux-g++" />
+            <Add directory="/home/andreas/Qt/5.8/gcc_64/include" />
+            <Add directory="/home/andreas/Qt/5.8/gcc_64/include/QtCore" />
+            <Add directory="/home/andreas/Qt/5.8/gcc_64/include/QtGui" />
+            <Add directory="/home/andreas/Qt/5.8/gcc_64/include/QtWidgets" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/5" />
+            <Add directory="/usr/include/c++/5/backward" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/5" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/andreas/Desktop/Projects/CageLab/cmake/Icons/Makefile&quot;  VERBOSE=1 QTCageRenderer" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/andreas/Desktop/Projects/CageLab/cmake/Icons/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/andreas/Desktop/Projects/CageLab/cmake/Icons/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/andreas/Desktop/Projects/CageLab/cmake/Icons/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="QTCageRenderer/fast">
+         <Option output="/home/andreas/Desktop/Projects/CageLab/cmake/Icons/QTCageRenderer" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/andreas/Desktop/Projects/CageLab/cmake/Icons" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DQT_CORE_LIB" />
+            <Add option="-DQT_GUI_LIB" />
+            <Add option="-DQT_WIDGETS_LIB" />
+            <Add option="-DvtkRenderingCore_AUTOINIT=3(vtkInteractionStyle,vtkRenderingFreeType,vtkRenderingOpenGL2)" />
+            <Add option="-DQT_NO_DEBUG" />
+            <Add directory="/home/andreas/Desktop/Projects/CageLab/cmake" />
+            <Add directory="/home/andreas/Desktop/Projects/CageLab/cmake/.." />
+            <Add directory="/home/andreas/Desktop/Projects/CageLab/cmake/../Deformation/include" />
+            <Add directory="/home/andreas/Desktop/Projects/CageLab/cmake/../ImatiSTL-4.2/include/ImatiSTL" />
+            <Add directory="/home/andreas/Desktop/Projects/CageLab/cmake/../ImatiSTL-4.2/include/Kernel" />
+            <Add directory="/home/andreas/Desktop/Projects/CageLab/cmake/../ImatiSTL-4.2/include/Rendering" />
+            <Add directory="/home/andreas/Desktop/Projects/CageLab/cmake/../ImatiSTL-4.2/include/TMesh" />
+            <Add directory="/home/andreas/Desktop/Projects/CageLab/cmake/../include" />
+            <Add directory="/home/andreas/Desktop/Projects/CageLab/cmake/Icons" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Charts/Core" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Common/Color" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Common/ComputationalGeometry" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Common/Core" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Common/DataModel" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Common/ExecutionModel" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Common/Math" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Common/Misc" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Common/System" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Common/Transforms" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Filters/Core" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Filters/Extraction" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Filters/General" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Filters/Geometry" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Filters/Hybrid" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Filters/Imaging" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Filters/Modeling" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Filters/Sources" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Filters/Statistics" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/GUISupport/Qt" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/IO/Core" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/IO/Image" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/IO/XML" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/IO/XMLParser" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Imaging/Color" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Imaging/Core" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Imaging/Fourier" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Imaging/General" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Imaging/Hybrid" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Imaging/Sources" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Infovis/Core" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Infovis/Layout" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Interaction/Style" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Interaction/Widgets" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Rendering/Annotation" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Rendering/Context2D" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Rendering/Core" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Rendering/FreeType" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Rendering/Label" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Rendering/OpenGL2" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Rendering/Volume" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/ThirdParty/alglib" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/ThirdParty/expat" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/ThirdParty/freetype" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/ThirdParty/glew" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/ThirdParty/jpeg" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/ThirdParty/lz4" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/ThirdParty/lz4/vtklz4" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/ThirdParty/png" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/ThirdParty/tiff" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/ThirdParty/tiff/vtktiff/libtiff" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/ThirdParty/zlib" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Utilities/DICOMParser" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Utilities/EncodeString" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Utilities/KWIML" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Utilities/KWSys" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Utilities/MetaIO" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Utilities/MetaIO/vtkmetaio" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Views/Core" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Views/Infovis" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK-Build/Views/Qt" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Charts/Core" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Common/Color" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Common/ComputationalGeometry" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Common/Core" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Common/DataModel" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Common/ExecutionModel" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Common/Math" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Common/Misc" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Common/System" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Common/Transforms" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Filters/Core" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Filters/Extraction" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Filters/General" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Filters/Geometry" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Filters/Hybrid" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Filters/Imaging" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Filters/Modeling" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Filters/Sources" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Filters/Statistics" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/GUISupport/Qt" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/IO/Core" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/IO/Image" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/IO/XML" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/IO/XMLParser" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Imaging/Color" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Imaging/Core" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Imaging/Fourier" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Imaging/General" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Imaging/Hybrid" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Imaging/Sources" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Infovis/Core" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Infovis/Layout" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Interaction/Style" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Interaction/Widgets" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Rendering/Annotation" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Rendering/Context2D" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Rendering/Core" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Rendering/FreeType" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Rendering/Label" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Rendering/OpenGL2" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Rendering/Volume" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/ThirdParty/alglib" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/ThirdParty/expat" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/ThirdParty/freetype" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/ThirdParty/glew" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/ThirdParty/jpeg" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/ThirdParty/lz4" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/ThirdParty/lz4/vtklz4/lib" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/ThirdParty/png" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/ThirdParty/tiff" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/ThirdParty/zlib" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Utilities/DICOMParser" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Utilities/EncodeString" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Utilities/KWIML" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Utilities/KWSys" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Utilities/MetaIO" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Views/Core" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Views/Infovis" />
+            <Add directory="/home/andreas/Desktop/Projects/VTK/Views/Qt" />
+            <Add directory="/home/andreas/Qt/5.8/gcc_64/./mkspecs/linux-g++" />
+            <Add directory="/home/andreas/Qt/5.8/gcc_64/include" />
+            <Add directory="/home/andreas/Qt/5.8/gcc_64/include/QtCore" />
+            <Add directory="/home/andreas/Qt/5.8/gcc_64/include/QtGui" />
+            <Add directory="/home/andreas/Qt/5.8/gcc_64/include/QtWidgets" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/5" />
+            <Add directory="/usr/include/c++/5/backward" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/5" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/andreas/Desktop/Projects/CageLab/cmake/Icons/Makefile&quot;  VERBOSE=1 QTCageRenderer/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/andreas/Desktop/Projects/CageLab/cmake/Icons/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/andreas/Desktop/Projects/CageLab/cmake/Icons/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/andreas/Desktop/Projects/CageLab/cmake/Icons/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="QTCageRenderer_automoc">
+         <Option working_dir="/home/andreas/Desktop/Projects/CageLab/cmake/Icons" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/andreas/Desktop/Projects/CageLab/cmake/Icons/Makefile&quot;  VERBOSE=1 QTCageRenderer_automoc" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/andreas/Desktop/Projects/CageLab/cmake/Icons/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/andreas/Desktop/Projects/CageLab/cmake/Icons/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/andreas/Desktop/Projects/CageLab/cmake/Icons/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      </Build>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/Deformation/include/barycentriccoordinates.h">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/Deformation/include/greencoordinates.h">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/Deformation/include/meanvaluecoordinatesju.h">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/Deformation/src/greencoordinates.cpp">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/Deformation/src/meanvaluecoordinatesju.cpp">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/ImatiSTL-4.2/include/ImatiSTL/cutIntersections.h">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/ImatiSTL-4.2/include/ImatiSTL/dijkstraGraph.h">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/ImatiSTL-4.2/include/ImatiSTL/imatistl.h">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/ImatiSTL-4.2/include/ImatiSTL/marchIntersections.h">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/ImatiSTL-4.2/include/ImatiSTL/trimesh.h">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/ImatiSTL-4.2/include/Kernel/basics.h">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/ImatiSTL-4.2/include/Kernel/coordinates.h">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/ImatiSTL-4.2/include/Kernel/graph.h">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/ImatiSTL-4.2/include/Kernel/heap.h">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/ImatiSTL-4.2/include/Kernel/jqsort.h">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/ImatiSTL-4.2/include/Kernel/list.h">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/ImatiSTL-4.2/include/Kernel/matrix.h">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/ImatiSTL-4.2/include/Kernel/point.h">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/ImatiSTL-4.2/include/Kernel/tmesh_kernel.h">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/ImatiSTL-4.2/include/Rendering/drawablemesh.h">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/ImatiSTL-4.2/include/TMesh/detectIntersections.h">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/ImatiSTL-4.2/include/TMesh/edge.h">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/ImatiSTL-4.2/include/TMesh/edgeHeap.h">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/ImatiSTL-4.2/include/TMesh/faceClustering.h">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/ImatiSTL-4.2/include/TMesh/simplification.h">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/ImatiSTL-4.2/include/TMesh/tin.h">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/ImatiSTL-4.2/include/TMesh/tmesh.h">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/ImatiSTL-4.2/include/TMesh/triangle.h">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/ImatiSTL-4.2/include/TMesh/vertex.h">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/ImatiSTL-4.2/src/Algorithms/checkAndRepair.cpp">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/ImatiSTL-4.2/src/Algorithms/delaunize.cpp">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/ImatiSTL-4.2/src/Algorithms/detectIntersections.cpp">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/ImatiSTL-4.2/src/Algorithms/faceClustering.cpp">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/ImatiSTL-4.2/src/Algorithms/featureRecover.cpp">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/ImatiSTL-4.2/src/Algorithms/holeFilling.cpp">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/ImatiSTL-4.2/src/Algorithms/simplification.cpp">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/ImatiSTL-4.2/src/Algorithms/smoothing.cpp">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/ImatiSTL-4.2/src/Algorithms/spherize.cpp">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/ImatiSTL-4.2/src/Algorithms/subdivision.cpp">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/ImatiSTL-4.2/src/ImatiSTL/computeOuterHull.cpp">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/ImatiSTL-4.2/src/ImatiSTL/cutIntersections.cpp">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/ImatiSTL-4.2/src/ImatiSTL/dijkstraGraph.cpp">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/ImatiSTL-4.2/src/ImatiSTL/epsilonSampling.cpp">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/ImatiSTL-4.2/src/ImatiSTL/marchIntersections.cpp">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/ImatiSTL-4.2/src/ImatiSTL/offset.cpp">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/ImatiSTL-4.2/src/ImatiSTL/uniformRemesh.cpp">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/ImatiSTL-4.2/src/Kernel/coordinates.cpp">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/ImatiSTL-4.2/src/Kernel/graph.cpp">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/ImatiSTL-4.2/src/Kernel/heap.cpp">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/ImatiSTL-4.2/src/Kernel/jqsort.cpp">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/ImatiSTL-4.2/src/Kernel/list.cpp">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/ImatiSTL-4.2/src/Kernel/matrix.cpp">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/ImatiSTL-4.2/src/Kernel/orientation.c">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/ImatiSTL-4.2/src/Kernel/point.cpp">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/ImatiSTL-4.2/src/Kernel/tmesh.cpp">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/ImatiSTL-4.2/src/Rendering/drawablemesh.cpp">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/ImatiSTL-4.2/src/TMesh/edge.cpp">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/ImatiSTL-4.2/src/TMesh/edgeHeap.cpp">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/ImatiSTL-4.2/src/TMesh/io.cpp">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/ImatiSTL-4.2/src/TMesh/tin.cpp">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/ImatiSTL-4.2/src/TMesh/triangle.cpp">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/ImatiSTL-4.2/src/TMesh/vertex.cpp">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/Icons/icons.qrc">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/gui/mainwindow.ui">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/include/mainwindow.h">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/include/meshdeformationstyle.h">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/include/verticesselectionstyle.h">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/src/main.cxx">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/src/mainwindow.cxx">
+         <Option target="QTCageRenderer"/>
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../VTK-Build/VTKConfigVersion.cmake">
+          <Option virtualFolder="CMake Files\..\..\VTK-Build\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../VTK-Build/VTKConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\VTK-Build\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../VTK-Build/VTKTargets.cmake">
+          <Option virtualFolder="CMake Files\..\..\VTK-Build\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../VTK-Build/lib/cmake/vtk-7.1/Modules/vtkCommonCore.cmake">
+          <Option virtualFolder="CMake Files\..\..\VTK-Build\lib\cmake\vtk-7.1\Modules\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../VTK-Build/lib/cmake/vtk-7.1/Modules/vtkkwiml.cmake">
+          <Option virtualFolder="CMake Files\..\..\VTK-Build\lib\cmake\vtk-7.1\Modules\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../VTK-Build/lib/cmake/vtk-7.1/Modules/vtksys.cmake">
+          <Option virtualFolder="CMake Files\..\..\VTK-Build\lib\cmake\vtk-7.1\Modules\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../VTK-Build/lib/cmake/vtk-7.1/Modules/vtkFiltersCore.cmake">
+          <Option virtualFolder="CMake Files\..\..\VTK-Build\lib\cmake\vtk-7.1\Modules\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../VTK-Build/lib/cmake/vtk-7.1/Modules/vtkCommonDataModel.cmake">
+          <Option virtualFolder="CMake Files\..\..\VTK-Build\lib\cmake\vtk-7.1\Modules\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../VTK-Build/lib/cmake/vtk-7.1/Modules/vtkCommonMath.cmake">
+          <Option virtualFolder="CMake Files\..\..\VTK-Build\lib\cmake\vtk-7.1\Modules\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../VTK-Build/lib/cmake/vtk-7.1/Modules/vtkCommonMisc.cmake">
+          <Option virtualFolder="CMake Files\..\..\VTK-Build\lib\cmake\vtk-7.1\Modules\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../VTK-Build/lib/cmake/vtk-7.1/Modules/vtkCommonSystem.cmake">
+          <Option virtualFolder="CMake Files\..\..\VTK-Build\lib\cmake\vtk-7.1\Modules\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../VTK-Build/lib/cmake/vtk-7.1/Modules/vtkCommonTransforms.cmake">
+          <Option virtualFolder="CMake Files\..\..\VTK-Build\lib\cmake\vtk-7.1\Modules\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../VTK-Build/lib/cmake/vtk-7.1/Modules/vtkCommonExecutionModel.cmake">
+          <Option virtualFolder="CMake Files\..\..\VTK-Build\lib\cmake\vtk-7.1\Modules\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../VTK-Build/lib/cmake/vtk-7.1/Modules/vtkInfovisCore.cmake">
+          <Option virtualFolder="CMake Files\..\..\VTK-Build\lib\cmake\vtk-7.1\Modules\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../VTK-Build/lib/cmake/vtk-7.1/Modules/vtkFiltersExtraction.cmake">
+          <Option virtualFolder="CMake Files\..\..\VTK-Build\lib\cmake\vtk-7.1\Modules\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../VTK-Build/lib/cmake/vtk-7.1/Modules/vtkFiltersGeneral.cmake">
+          <Option virtualFolder="CMake Files\..\..\VTK-Build\lib\cmake\vtk-7.1\Modules\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../VTK-Build/lib/cmake/vtk-7.1/Modules/vtkCommonComputationalGeometry.cmake">
+          <Option virtualFolder="CMake Files\..\..\VTK-Build\lib\cmake\vtk-7.1\Modules\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../VTK-Build/lib/cmake/vtk-7.1/Modules/vtkFiltersStatistics.cmake">
+          <Option virtualFolder="CMake Files\..\..\VTK-Build\lib\cmake\vtk-7.1\Modules\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../VTK-Build/lib/cmake/vtk-7.1/Modules/vtkImagingFourier.cmake">
+          <Option virtualFolder="CMake Files\..\..\VTK-Build\lib\cmake\vtk-7.1\Modules\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../VTK-Build/lib/cmake/vtk-7.1/Modules/vtkImagingCore.cmake">
+          <Option virtualFolder="CMake Files\..\..\VTK-Build\lib\cmake\vtk-7.1\Modules\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../VTK-Build/lib/cmake/vtk-7.1/Modules/vtkalglib.cmake">
+          <Option virtualFolder="CMake Files\..\..\VTK-Build\lib\cmake\vtk-7.1\Modules\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../VTK-Build/lib/cmake/vtk-7.1/Modules/vtkInteractionStyle.cmake">
+          <Option virtualFolder="CMake Files\..\..\VTK-Build\lib\cmake\vtk-7.1\Modules\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../VTK-Build/lib/cmake/vtk-7.1/Modules/vtkFiltersSources.cmake">
+          <Option virtualFolder="CMake Files\..\..\VTK-Build\lib\cmake\vtk-7.1\Modules\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../VTK-Build/lib/cmake/vtk-7.1/Modules/vtkRenderingCore.cmake">
+          <Option virtualFolder="CMake Files\..\..\VTK-Build\lib\cmake\vtk-7.1\Modules\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../VTK-Build/lib/cmake/vtk-7.1/Modules/vtkCommonColor.cmake">
+          <Option virtualFolder="CMake Files\..\..\VTK-Build\lib\cmake\vtk-7.1\Modules\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../VTK-Build/lib/cmake/vtk-7.1/Modules/vtkFiltersGeometry.cmake">
+          <Option virtualFolder="CMake Files\..\..\VTK-Build\lib\cmake\vtk-7.1\Modules\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../VTK-Build/lib/cmake/vtk-7.1/Modules/vtkViewsQt.cmake">
+          <Option virtualFolder="CMake Files\..\..\VTK-Build\lib\cmake\vtk-7.1\Modules\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../VTK-Build/lib/cmake/vtk-7.1/Modules/vtkGUISupportQt.cmake">
+          <Option virtualFolder="CMake Files\..\..\VTK-Build\lib\cmake\vtk-7.1\Modules\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../VTK-Build/lib/cmake/vtk-7.1/Modules/vtkRenderingOpenGL2.cmake">
+          <Option virtualFolder="CMake Files\..\..\VTK-Build\lib\cmake\vtk-7.1\Modules\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../VTK-Build/lib/cmake/vtk-7.1/Modules/vtkIOImage.cmake">
+          <Option virtualFolder="CMake Files\..\..\VTK-Build\lib\cmake\vtk-7.1\Modules\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../VTK-Build/lib/cmake/vtk-7.1/Modules/vtkDICOMParser.cmake">
+          <Option virtualFolder="CMake Files\..\..\VTK-Build\lib\cmake\vtk-7.1\Modules\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../VTK-Build/lib/cmake/vtk-7.1/Modules/vtkMetaIO.cmake">
+          <Option virtualFolder="CMake Files\..\..\VTK-Build\lib\cmake\vtk-7.1\Modules\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../VTK-Build/lib/cmake/vtk-7.1/Modules/vtkzlib.cmake">
+          <Option virtualFolder="CMake Files\..\..\VTK-Build\lib\cmake\vtk-7.1\Modules\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../VTK-Build/lib/cmake/vtk-7.1/Modules/vtkjpeg.cmake">
+          <Option virtualFolder="CMake Files\..\..\VTK-Build\lib\cmake\vtk-7.1\Modules\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../VTK-Build/lib/cmake/vtk-7.1/Modules/vtkpng.cmake">
+          <Option virtualFolder="CMake Files\..\..\VTK-Build\lib\cmake\vtk-7.1\Modules\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../VTK-Build/lib/cmake/vtk-7.1/Modules/vtktiff.cmake">
+          <Option virtualFolder="CMake Files\..\..\VTK-Build\lib\cmake\vtk-7.1\Modules\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../VTK-Build/lib/cmake/vtk-7.1/Modules/vtkUtilitiesEncodeString.cmake">
+          <Option virtualFolder="CMake Files\..\..\VTK-Build\lib\cmake\vtk-7.1\Modules\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../VTK-Build/lib/cmake/vtk-7.1/Modules/vtkglew.cmake">
+          <Option virtualFolder="CMake Files\..\..\VTK-Build\lib\cmake\vtk-7.1\Modules\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../VTK-Build/lib/cmake/vtk-7.1/Modules/vtkViewsCore.cmake">
+          <Option virtualFolder="CMake Files\..\..\VTK-Build\lib\cmake\vtk-7.1\Modules\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../VTK-Build/lib/cmake/vtk-7.1/Modules/vtkInteractionWidgets.cmake">
+          <Option virtualFolder="CMake Files\..\..\VTK-Build\lib\cmake\vtk-7.1\Modules\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../VTK-Build/lib/cmake/vtk-7.1/Modules/vtkFiltersHybrid.cmake">
+          <Option virtualFolder="CMake Files\..\..\VTK-Build\lib\cmake\vtk-7.1\Modules\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../VTK-Build/lib/cmake/vtk-7.1/Modules/vtkImagingSources.cmake">
+          <Option virtualFolder="CMake Files\..\..\VTK-Build\lib\cmake\vtk-7.1\Modules\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../VTK-Build/lib/cmake/vtk-7.1/Modules/vtkFiltersModeling.cmake">
+          <Option virtualFolder="CMake Files\..\..\VTK-Build\lib\cmake\vtk-7.1\Modules\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../VTK-Build/lib/cmake/vtk-7.1/Modules/vtkImagingColor.cmake">
+          <Option virtualFolder="CMake Files\..\..\VTK-Build\lib\cmake\vtk-7.1\Modules\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../VTK-Build/lib/cmake/vtk-7.1/Modules/vtkImagingGeneral.cmake">
+          <Option virtualFolder="CMake Files\..\..\VTK-Build\lib\cmake\vtk-7.1\Modules\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../VTK-Build/lib/cmake/vtk-7.1/Modules/vtkImagingHybrid.cmake">
+          <Option virtualFolder="CMake Files\..\..\VTK-Build\lib\cmake\vtk-7.1\Modules\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../VTK-Build/lib/cmake/vtk-7.1/Modules/vtkRenderingAnnotation.cmake">
+          <Option virtualFolder="CMake Files\..\..\VTK-Build\lib\cmake\vtk-7.1\Modules\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../VTK-Build/lib/cmake/vtk-7.1/Modules/vtkRenderingFreeType.cmake">
+          <Option virtualFolder="CMake Files\..\..\VTK-Build\lib\cmake\vtk-7.1\Modules\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../VTK-Build/lib/cmake/vtk-7.1/Modules/vtkfreetype.cmake">
+          <Option virtualFolder="CMake Files\..\..\VTK-Build\lib\cmake\vtk-7.1\Modules\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../VTK-Build/lib/cmake/vtk-7.1/Modules/vtkRenderingVolume.cmake">
+          <Option virtualFolder="CMake Files\..\..\VTK-Build\lib\cmake\vtk-7.1\Modules\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../VTK-Build/lib/cmake/vtk-7.1/Modules/vtkIOXML.cmake">
+          <Option virtualFolder="CMake Files\..\..\VTK-Build\lib\cmake\vtk-7.1\Modules\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../VTK-Build/lib/cmake/vtk-7.1/Modules/vtkIOCore.cmake">
+          <Option virtualFolder="CMake Files\..\..\VTK-Build\lib\cmake\vtk-7.1\Modules\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../VTK-Build/lib/cmake/vtk-7.1/Modules/vtklz4.cmake">
+          <Option virtualFolder="CMake Files\..\..\VTK-Build\lib\cmake\vtk-7.1\Modules\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../VTK-Build/lib/cmake/vtk-7.1/Modules/vtkIOXMLParser.cmake">
+          <Option virtualFolder="CMake Files\..\..\VTK-Build\lib\cmake\vtk-7.1\Modules\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../VTK-Build/lib/cmake/vtk-7.1/Modules/vtkexpat.cmake">
+          <Option virtualFolder="CMake Files\..\..\VTK-Build\lib\cmake\vtk-7.1\Modules\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../VTK-Build/lib/cmake/vtk-7.1/Modules/vtkViewsInfovis.cmake">
+          <Option virtualFolder="CMake Files\..\..\VTK-Build\lib\cmake\vtk-7.1\Modules\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../VTK-Build/lib/cmake/vtk-7.1/Modules/vtkChartsCore.cmake">
+          <Option virtualFolder="CMake Files\..\..\VTK-Build\lib\cmake\vtk-7.1\Modules\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../VTK-Build/lib/cmake/vtk-7.1/Modules/vtkRenderingContext2D.cmake">
+          <Option virtualFolder="CMake Files\..\..\VTK-Build\lib\cmake\vtk-7.1\Modules\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../VTK-Build/lib/cmake/vtk-7.1/Modules/vtkFiltersImaging.cmake">
+          <Option virtualFolder="CMake Files\..\..\VTK-Build\lib\cmake\vtk-7.1\Modules\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../VTK-Build/lib/cmake/vtk-7.1/Modules/vtkInfovisLayout.cmake">
+          <Option virtualFolder="CMake Files\..\..\VTK-Build\lib\cmake\vtk-7.1\Modules\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../VTK-Build/lib/cmake/vtk-7.1/Modules/vtkRenderingLabel.cmake">
+          <Option virtualFolder="CMake Files\..\..\VTK-Build\lib\cmake\vtk-7.1\Modules\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../VTK/CMake/vtkModuleAPI.cmake">
+          <Option virtualFolder="CMake Files\..\..\VTK\CMake\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../VTK/CMake/UseVTK.cmake">
+          <Option virtualFolder="CMake Files\..\..\VTK\CMake\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../../../Qt/5.8/gcc_64/lib/cmake/Qt5/Qt5ConfigVersion.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.8\gcc_64\lib\cmake\Qt5\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../../../Qt/5.8/gcc_64/lib/cmake/Qt5/Qt5Config.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.8\gcc_64\lib\cmake\Qt5\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../../../Qt/5.8/gcc_64/lib/cmake/Qt5/Qt5ModuleLocation.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.8\gcc_64\lib\cmake\Qt5\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../../../Qt/5.8/gcc_64/lib/cmake/Qt5/Qt5ConfigVersion.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.8\gcc_64\lib\cmake\Qt5\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../../../Qt/5.8/gcc_64/lib/cmake/Qt5/Qt5Config.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.8\gcc_64\lib\cmake\Qt5\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../../../Qt/5.8/gcc_64/lib/cmake/Qt5/Qt5ModuleLocation.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.8\gcc_64\lib\cmake\Qt5\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../../../Qt/5.8/gcc_64/lib/cmake/Qt5/Qt5ConfigVersion.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.8\gcc_64\lib\cmake\Qt5\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../../../Qt/5.8/gcc_64/lib/cmake/Qt5/Qt5Config.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.8\gcc_64\lib\cmake\Qt5\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../../../Qt/5.8/gcc_64/lib/cmake/Qt5/Qt5ModuleLocation.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.8\gcc_64\lib\cmake\Qt5\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../../../Qt/5.8/gcc_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.8\gcc_64\lib\cmake\Qt5Widgets\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../../../Qt/5.8/gcc_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.8\gcc_64\lib\cmake\Qt5Widgets\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../../../Qt/5.8/gcc_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.8\gcc_64\lib\cmake\Qt5Widgets\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../../../Qt/5.8/gcc_64/lib/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.8\gcc_64\lib\cmake\Qt5Widgets\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../../../Qt/5.8/gcc_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.8\gcc_64\lib\cmake\Qt5Widgets\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../../../Qt/5.8/gcc_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.8\gcc_64\lib\cmake\Qt5Widgets\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../../../Qt/5.8/gcc_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.8\gcc_64\lib\cmake\Qt5Widgets\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../../../Qt/5.8/gcc_64/lib/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.8\gcc_64\lib\cmake\Qt5Widgets\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../../../Qt/5.8/gcc_64/lib/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.8\gcc_64\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../../../Qt/5.8/gcc_64/lib/cmake/Qt5Gui/Qt5GuiConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.8\gcc_64\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../../../Qt/5.8/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QWebpPlugin.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.8\gcc_64\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../../../Qt/5.8/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QEvdevTabletPlugin.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.8\gcc_64\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../../../Qt/5.8/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QEglFSIntegrationPlugin.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.8\gcc_64\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../../../Qt/5.8/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QTuioTouchPlugin.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.8\gcc_64\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../../../Qt/5.8/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QMinimalEglIntegrationPlugin.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.8\gcc_64\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../../../Qt/5.8/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QXcbEglIntegrationPlugin.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.8\gcc_64\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../../../Qt/5.8/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QXcbIntegrationPlugin.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.8\gcc_64\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../../../Qt/5.8/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QGifPlugin.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.8\gcc_64\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../../../Qt/5.8/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QLinuxFbIntegrationPlugin.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.8\gcc_64\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../../../Qt/5.8/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QIbusPlatformInputContextPlugin.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.8\gcc_64\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../../../Qt/5.8/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QOffscreenIntegrationPlugin.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.8\gcc_64\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../../../Qt/5.8/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QGtk3ThemePlugin.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.8\gcc_64\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../../../Qt/5.8/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QVirtualKeyboardPlugin.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.8\gcc_64\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../../../Qt/5.8/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QICNSPlugin.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.8\gcc_64\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../../../Qt/5.8/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QWbmpPlugin.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.8\gcc_64\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../../../Qt/5.8/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QEvdevKeyboardPlugin.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.8\gcc_64\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../../../Qt/5.8/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QEvdevMousePlugin.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.8\gcc_64\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../../../Qt/5.8/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QMinimalIntegrationPlugin.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.8\gcc_64\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../../../Qt/5.8/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QJp2Plugin.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.8\gcc_64\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../../../Qt/5.8/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QXcbGlxIntegrationPlugin.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.8\gcc_64\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../../../Qt/5.8/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QEglFSX11IntegrationPlugin.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.8\gcc_64\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../../../Qt/5.8/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QComposePlatformInputContextPlugin.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.8\gcc_64\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../../../Qt/5.8/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QJpegPlugin.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.8\gcc_64\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../../../Qt/5.8/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QICOPlugin.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.8\gcc_64\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../../../Qt/5.8/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QTgaPlugin.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.8\gcc_64\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../../../Qt/5.8/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QEvdevTouchScreenPlugin.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.8\gcc_64\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../../../Qt/5.8/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QVncIntegrationPlugin.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.8\gcc_64\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../../../Qt/5.8/gcc_64/lib/cmake/Qt5Gui/Qt5Gui_QTiffPlugin.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.8\gcc_64\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../../../Qt/5.8/gcc_64/lib/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.8\gcc_64\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../../../Qt/5.8/gcc_64/lib/cmake/Qt5Core/Qt5CoreConfigVersion.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.8\gcc_64\lib\cmake\Qt5Core\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../../../Qt/5.8/gcc_64/lib/cmake/Qt5Core/Qt5CoreConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.8\gcc_64\lib\cmake\Qt5Core\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../../../Qt/5.8/gcc_64/lib/cmake/Qt5Core/Qt5CoreConfigExtras.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.8\gcc_64\lib\cmake\Qt5Core\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../../../Qt/5.8/gcc_64/lib/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.8\gcc_64\lib\cmake\Qt5Core\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/../../../../Qt/5.8/gcc_64/lib/cmake/Qt5Core/Qt5CoreMacros.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\..\Qt\5.8\gcc_64\lib\cmake\Qt5Core\" />
+      </Unit>
+      <Unit filename="/home/andreas/Desktop/Projects/CageLab/cmake/Icons/icons.qrc">
+          <Option virtualFolder="CMake Files\Icons\" />
+      </Unit>
+   </Project>
+</CodeBlocks_project_file>

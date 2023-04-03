@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ConstraintDialog</class>
+ <widget class="QDialog" name="ConstraintDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>395</width>
+    <height>622</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ConstraintDialog</string>
+  </property>
+  <widget class="QListWidget" name="typeList">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>20</y>
+     <width>256</width>
+     <height>291</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <item>
+    <property name="text">
+     <string>EdgeStrain</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>TriangleStrain</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>TetrahedronStrain</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Area</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Volume</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Bending</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Closeness</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Line</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Plane</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Circle</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Sphere</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Similarity</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Rigid</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Rectangle</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Parallelogram</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Laplacian</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>LaplacianDisplacement</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>24</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Type</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>355</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Weight</string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="weightSpinBox">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>350</y>
+     <width>71</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <property name="maximum">
+    <number>1000</number>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="CancelButton">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>550</y>
+     <width>111</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Cancel</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="SaveButton">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>550</y>
+     <width>111</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="RelativeOption">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>420</y>
+     <width>371</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <item>
+    <property name="text">
+     <string>Relative</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Absolute</string>
+    </property>
+   </item>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
